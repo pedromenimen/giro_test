@@ -1,9 +1,11 @@
+import SimulationForm from '../../components/simulation_form';
+
 const Simulation = () => {
-    return (
-        <>
-            
-        </>
-    )
+  return (
+    <>
+      <SimulationForm />
+    </>
+  );
 };
 
 export default Simulation;
