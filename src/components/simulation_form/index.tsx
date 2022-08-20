@@ -1,18 +1,15 @@
-import { useSimulation } from '../../provider/simulation';
-
 const SimulationForm = () => {
-  const { setValue, setTime, value, time } = useSimulation();
   const handleSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
-    const value = (
+    const investedValue = (
       evt.currentTarget.elements.namedItem('value') as HTMLInputElement
     ).value;
-    const time = (
+    const investedTime = (
       evt.currentTarget.elements.namedItem('time') as HTMLInputElement
     ).value;
-    setValue(parseInt(value));
-    setTime(parseInt(time));
-    window.location.replace("/result")
+    localStorage.setItem('value', investedValue);
+    localStorage.setItem('time', investedTime);
+    window.location.replace('/result');
   };
   return (
     <>
