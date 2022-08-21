@@ -23,6 +23,7 @@ const Form = () => {
     <>
       <div
         style={{ visibility: hidden ? 'hidden' : 'visible' }}
+        id="error"
         className='pt-[5vh] absolute right-[2vw]'
       >
         <Alert color='warning' onDismiss={() => setHidden(!hidden)}>
